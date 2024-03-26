@@ -1,1 +1,1 @@
-# thingks
+# thingks - for learning purposes
