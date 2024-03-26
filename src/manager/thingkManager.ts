@@ -1,6 +1,6 @@
 import { Thingk } from "../entities/thingk";
 import { ThingkFactory } from "../factories/thingkFactory";
-import { IThingk } from "../interfaces/iThingk";
+import { ICreateThingk, IThingk } from "../interfaces/iThingk";
 
 export class ThingkManager {
     private thingks: IThingk[] = [];
@@ -11,7 +11,7 @@ export class ThingkManager {
         this.thingkFactory = ThingkFactory.getInstance();
     }
 
-    addThingk(thingk: Partial<IThingk>): void {
+    addThingk(thingk: ICreateThingk): void {
         const newThingk = this.thingkFactory.createThingk(thingk);
         this.thingks.push(newThingk);
     }
